@@ -4,6 +4,7 @@ import {
   KeyboardArrowDownRounded,
   KeyboardArrowUpRounded,
 } from "@material-ui/icons";
+import Link from "next/Link";
 
 const orderBy = (countries, value, direction) => {
   if (direction === "asc") {
@@ -58,7 +59,7 @@ const CountriesTable = ({ countries }) => {
   };
   return (
     <>
-      <div>
+   
         <div className={styles.heading}>
           <button
             className={styles.heading_name}
@@ -77,12 +78,14 @@ const CountriesTable = ({ countries }) => {
           </button>
         </div>
         {orderedCountries.map((country) => (
-          <div className={styles.row}>
-            <div className={styles.name}>{country.altSpellings[1]}</div>
-            <div className={styles.population}>{country.population}</div>
-          </div>
+          <Link href={`/country/${country.capital}`}>
+            <div className={styles.row}>
+              <div className={styles.name}>{country.altSpellings[1]}</div>
+              <div className={styles.population}>{country.population}</div>
+            </div>
+          </Link>
         ))}
-      </div>
+    
     </>
   );
 };

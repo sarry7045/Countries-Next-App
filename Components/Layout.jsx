@@ -4,12 +4,9 @@ import styles from "./Layout.module.css";
 const Layout = ({ children }) => {
   return (
     <>
-      <header className={styles.header}> Countries Population</header>
+      <header className={styles.header}>All About All Countries</header>
       <main className={styles.main}>{children}</main>
-      <footer className={styles.footer}>
-        {" "}
-        Countries Population Calculator App{" "}
-      </footer>
+      <footer className={styles.footer}>Created By | Suraj Yadav</footer>
     </>
   );
 };

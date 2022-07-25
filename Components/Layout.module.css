@@ -13,13 +13,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 32px;
+  margin-bottom: 30px;
+  margin-top: 2rem;
+  font-style: bold;
+  font-size: 1.2rem;
 }
 
 .footer {
   margin-top: 32px;
   text-align: center;
-  font-size: 0.75rem;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
 }
 
 .themeSwitcher {
