@@ -16,6 +16,16 @@
   margin-bottom: 0;
 }
 
+.backButton {
+  background-color: #008cba;
+  color: whitesmoke;
+  border: 1px solid #0a87b0;
+  font-size: 15px;
+  margin-top: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
 .overview_region {
   text-align: center;
   font-size: 14px;

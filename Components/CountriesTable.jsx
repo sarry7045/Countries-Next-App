@@ -59,33 +59,60 @@ const CountriesTable = ({ countries }) => {
   };
   return (
     <>
-   
-        <div className={styles.heading}>
-          <button
-            className={styles.heading_name}
-            onClick={() => setValueAndDirection("name")}
-          >
-            <div>Name</div>
-            <SortArrow direction="desc" />
-          </button>
+      <div className={styles.heading}>
+        <button
+          className={styles.heading_name}
+          onClick={() => setValueAndDirection("name")}
+        >
+          <div>Name</div>
+          <SortArrow direction="desc" />
+        </button>
 
-          <button
-            className={styles.heading_population}
-            onClick={() => setValueAndDirection("population")}
-          >
-            <div>Population</div>
-            <SortArrow direction="asc" />
-          </button>
-        </div>
-        {orderedCountries.map((country) => (
-          <Link href={`/country/${country.capital}`}>
-            <div className={styles.row}>
-              <div className={styles.name}>{country.altSpellings[1]}</div>
-              <div className={styles.population}>{country.population}</div>
+        <button
+          className={styles.heading_population}
+          onClick={() => setValueAndDirection("population")}
+        >
+          <div>Population</div>
+          <SortArrow direction="asc" />
+        </button>
+
+        <button
+          className={styles.heading_area}
+          onClick={() => setValueAndDirection("population")}
+        >
+          <div>Area</div>
+          <SortArrow direction="desc" />
+        </button>
+
+        <button
+          className={styles.heading_gini}
+          onClick={() => setValueAndDirection("population")}
+        >
+          <div>Region</div>
+          <SortArrow direction="asc" />
+        </button>
+      </div>
+      {orderedCountries.map((country) => (
+        <Link href={`/country/${country.capital}`}>
+          <div className={styles.row}>
+            <div className={styles.flag}>
+              <img src={country.flags.png} alt="IMG" />
             </div>
-          </Link>
-        ))}
-    
+            <div style={{ cursor: "pointer" }} className={styles.name}>
+              {country.altSpellings[1]}
+            </div>
+            <div style={{ cursor: "pointer" }} className={styles.population}>
+              {country.population}
+            </div>
+            <div style={{ cursor: "pointer" }} className={styles.population}>
+              {country.area} sq.km
+            </div>
+            <div style={{ cursor: "pointer" }} className={styles.population}>
+              {country.region}
+            </div>
+          </div>
+        </Link>
+      ))}
     </>
   );
 };

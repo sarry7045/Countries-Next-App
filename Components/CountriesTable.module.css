@@ -1,6 +1,7 @@
 .heading {
   display: flex;
   padding: 20px;
+  margin-top: -10px;
 }
 
 .heading button {
@@ -26,6 +27,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 55px;
+  
 }
 
 .heading_name {
@@ -86,8 +89,8 @@
 }
 
 .flag img {
-  border-radius: 2px;
-  width: 100%;
+  border-radius: 3px;
+  width: 60%;
 }
 
 @media screen and (max-width: 720px) {

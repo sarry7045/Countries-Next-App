@@ -6,7 +6,9 @@ const Layout = ({ children }) => {
     <>
       <header className={styles.header}>All About All Countries</header>
       <main className={styles.main}>{children}</main>
-      <footer className={styles.footer}>Created By | Suraj Yadav</footer>
+      <footer className={styles.footer}>
+        Created By | <a href="https://surajyadav.vercel.app/" target="_blank">Suraj Yadav</a>
+      </footer>
     </>
   );
 };
