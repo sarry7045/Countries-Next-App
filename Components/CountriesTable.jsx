@@ -4,7 +4,7 @@ import {
   KeyboardArrowDownRounded,
   KeyboardArrowUpRounded,
 } from "@material-ui/icons";
-import Link from "next/Link";
+import Link from "next/link";
 
 const orderBy = (countries, value, direction) => {
   if (direction === "asc") {
